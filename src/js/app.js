@@ -1,7 +1,7 @@
-define(['jquery'], function($){
+define(['jquery', 'underscore', 'backbone', 'router'], function($, _ , Backbone, router){
 
 	var init = function(){
-		console.log('hello');
+		router.init();
 	};
 
 	return {

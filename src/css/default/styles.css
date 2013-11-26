@@ -1,0 +1,7 @@
+html, body{ margin: 0; padding: 0; height: 100%; }
+h1{ margin: 0; }
+
+#container{ height: 100%; }
+#logo{ height: 37px; }
+.menu{ position: absolute; width: 100%; top: 0; height: 37px;}
+ul.nav{ margin: 0; }

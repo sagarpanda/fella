@@ -1,7 +1,13 @@
-define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
+define([
+		'jquery', 
+		'underscore', 
+		'backbone',
+		'views/fb/PhotosView'
+	], function($, _, Backbone, PhotosView) {
 	var AppRouter = Backbone.Router.extend({
 		routes: {
 			'users': 'showUsers',
+			'fb': 'showFb',
 			'user/:id': 'showUser',
 			'*actions': 'defaultAction'
 		}
@@ -25,6 +31,12 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 			//var homeView = new HomeView();
 			//homeView.render();
 			console.log('defaultAction');
+		});
+
+		app_router.on('route:showFb', function(){
+			//console.log('fb');
+			var photosView = new PhotosView();
+			photosView.render();
 		});
 
 		Backbone.history.start();

@@ -1,14 +1,7 @@
 require.config({
 	//baseUrl: 'js',
 	urlArgs: "bust=" + (new Date()).getTime(),
-	enforceDefine: true,
-	paths: {
-		jquery: 'libs/jquery-1.10.2.min',
-		underscore: 'libs/underscore-min',
-		backbone: 'libs/backbone-min',
-		router: 'router',
-		templates: '../templates'
-	},
+	enforceDefine: false,
 	//fixed the issue of non-AMD modules like underscore and backbone
 	shim: {
 		underscore: {
@@ -17,11 +10,18 @@ require.config({
 		backbone: {
 		  deps: ["underscore", "jquery"],
 		  exports: "Backbone"
+		},
+		facebook: {
+			export: 'FB'
 		}
+	},
+	paths: {
+		jquery: 'libs/jquery-1.10.2.min',
+		underscore: 'libs/underscore-min',
+		backbone: 'libs/backbone-min',
+		router: 'router',
+		facebook: '//connect.facebook.net/en_US/all',
+		templates: '../templates'
 	}
-
 });
-
-define(['app', 'jquery'], function(App, $){
-  App.init();
-});
+define(['app', 'jquery'], function(App, $){ App.init(); });

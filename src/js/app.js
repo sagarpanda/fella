@@ -2,6 +2,11 @@ define(['jquery', 'underscore', 'backbone', 'router'], function($, _ , Backbone,
 
 	var init = function(){
 		router.init();
+		$(window).resize(resizer);
+	};
+
+	var resizer = function(){
+		//console.log('hello resizer');
 	};
 
 	return {

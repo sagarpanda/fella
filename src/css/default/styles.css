@@ -4,4 +4,6 @@ h1{ margin: 0; }
 #container{ height: 100%; }
 #logo{ height: 37px; }
 .menu{ position: absolute; width: 100%; top: 0; height: 37px;}
+.navbar-inner{ margin-left: 100px; }
 ul.nav{ margin: 0; }
+.nav li{ float: left; list-style-type: none; margin: 0 10px; }

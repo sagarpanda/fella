@@ -36,7 +36,8 @@ define([
 		app_router.on('route:showFb', function(){
 			//console.log('fb');
 			var photosView = new PhotosView();
-			photosView.render();
+			//photosView.render();
+			photosView.showAlbums();
 		});
 
 		Backbone.history.start();
